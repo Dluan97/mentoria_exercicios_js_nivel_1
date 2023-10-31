@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+    <title>Trabalhando com dados</title>
+    <style>
+        .botao-grande {
+            padding: 20px 40px;
+            font-size: 16px;
+
+        }
+    </style>
+  </head>  
+  <body>
+    <button class="botao-grande" onclick="exibirSaudacao">Clique para exibir a saudacao</button>
+    <script>
+    function exibirSaudacao() {
+        var nome = prompt("Por favor digite seu nome");
+        if (nome !== null) {
+            var saudacao = "Olá " + nome + " obrigado pela interação";
+            alert(saudacao);
+        } else{
+            alert(" Você não forneceu um nome.")
+        }
+    }
+    </script>
+  </body>
+</html>
+
+
