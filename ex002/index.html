@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Botão Simples</title>
+    </head>
+    <body>
+        <h1>Interagindo com o Botão</h1>
+        <button id="botão">Clique em mim</button>
+        <p id= "resultado"></p>
+
+        <script>
+            var botao = document.getElementById("botao");
+            var resultado = document.getElementById("resultado");
+
+            botao.addEventListener("click", function() {
+                resultado.textContent = "Botão clicado!";
+            });
+
+        </script>
+    </body>
+</html>
