@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador constante</title>
+    <style>
+        body{ font: 12pt Arial}
+        button{font-size: 12pt; padding: 40px;}
+    </style>
+    </head>
+    <body>
+        <h1>Placar Eletrónico</h1>
+
+        <p>Casa</p>
+        <button id="casa" onclick="aumentarCasa()">0</button>
+
+        <p>Visitante</p>
+        <button id="visitante" onclick="aumentarVisitante()">0</button>  
+        <br>
+        <br>
+        <button onclick="zerarPlacar()">Zerar</button>
+        <p id ="vencedor"> </p>
+    
+
+        <script>
+            let casa = 0;
+            let visitante = 0;
+            function aumentarCasa() {
+                
+                casa = casa + 1
+
+                let htmlSpanCasa = document.querySelector("#casa")
+                
+                htmlSpanCasa.innerHTML=  casa
+                
+                
+            }
+            function aumentarVisitante() {
+
+                visitante = visitante + 1;
+
+                let htmlSpanVisitante = document.querySelector("#visitante")
+
+                htmlSpanVisitante.innerHTML= visitante
+                
+            }
+            function zerarPlacar() {
+                definirVencedor()
+                casa = 0;
+                visitante = 0;
+
+                let htmlSpanCasa = document.querySelector("#casa")
+                htmlSpanCasa.innerHTML= casa
+                let htmlSpanVisitante = document.querySelector("#visitante")
+                htmlSpanVisitante.innerHTML=visitante
+
+                                
+            }
+            function definirVencedor() {
+                let vencedor = ""
+                if(casa > visitante){
+                    vencedor = "Vencedor da partida : Casa"
+                }else if(visitante > casa){
+                    vencedor = "Vencedor da partida : Visitante"
+                }
+                let htmlSpanVencedor = document.querySelector("#vencedor")
+                htmlSpanVencedor.innerHTML= vencedor
+
+              
+            }
+        </script>
+
+    </body>
+</html>
