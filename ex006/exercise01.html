@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Cursos - JavaScript Básico</title>
+        <script>
+            var nome = "Treinamento JavaScript - Curso Web"; 
+            alert("Esta é uma mensagem do curso " + nome);
+
+            var pergunta = confirm("Você está gostando do curso?");
+            
+            var nomeUsuario = prompt("Qual seu nome?" , "Nome");
+
+            setTimeout('VascoDaGama()',3000);
+            function VascoDaGama(){
+                console.log("Vasco!");
+            }
+            // o console.log eu vejo no terminal do navegador para conferir se está funcionando
+
+            if(nomeUsuario !=''){
+                alert("Seu nome é: "+nomeUsuario+"!");
+            } else {
+                alert("Poxa não sei seu nome =/");
+            }
+            
+            if(pergunta==true) {
+                alert("Ficamos imensamente felizes que você esteja gostando!");
+            } else {
+                alert("Poxa em que podemos melhorar?");
+            }
+        </script>
+    </head>
+    <Body>
+        <p>Curso de - JavaScript Básico - Objeto Window</p>
+    </Body>
+</html>
