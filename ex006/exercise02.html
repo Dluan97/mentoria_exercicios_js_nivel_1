@@ -21,7 +21,7 @@
               //  document.write("Inserir texto no documento.");
             //}
 
-          /*  function manipularElemento() {
+        /*  function manipularElemento() {
                 document.write("<pre>");
                 document.write("Inserindo texto no documento com write().");
                 document.write("Linha1.");
@@ -39,6 +39,35 @@
             function manipularElemento(){
                 var nome= document.getElementById("nome");
                 alert("O nome é: "+nome.value);
+            }
+
+            function manipularElemento(){
+                document.getElementById("nome").style.color="red";
+                document.getElementById("enviar").style.backgroundColor="blue";
+                document.getElementById("limpar").style.fontSize = "italic";
+            }
+
+            function manipularElemento(){
+                var nome = document.getElementsByName("sexo");
+                alert("O total de elementos com o nome 'sexo' é: " + nome.length);
+            }
+
+            function manipularElemento(){
+                //Seleciona os elementos e os armazena em variávei
+                var nome = document.getElementById("nome");
+                var sexo = document.getElementsByName("sexo");
+
+                //Cria a variável que armazenará as informações e ja a inicializa com nome
+                var informações = "Seu nome: " + nome.value;
+
+                //Acrescenta o sexo
+                if(sexo [0].checked)
+                informações += "\n O seu sexo é: Masculino.";
+                else if(sexo [1].checked)
+                informações += "\n O seu sexo é: Feminino.";
+
+                //Exibe umm alerta com as informações obitidas
+                alert(informações);
             }
         </script>
     </head>

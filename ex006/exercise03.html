@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>TreinaWeb Cursos - JavaScript Básico</title>
+
+        <script>
+            function executarAcao(acao) {
+                if(acao ==='click'){
+                    alert("O botão Enviar foi clicado!");
+                } else if(acao === 'change') {
+                    alert("A caixa de texto foi modificada!");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <p><input type="text" onchange="executarAcao('change');" value="Modifique o Texto"/></p>
+        <p><input type="button" onclick="executarAcao('click');" value="Enviar" /></p>
+    </body>
+</html>
